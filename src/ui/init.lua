@@ -1,0 +1,8 @@
+require("src/ui/WaittingUI")
+require("src/ui/TipsUI")
+require("src/ui/CommonGrid")
+require("src/ui/RuleUI")
+require("src/ui/ActionUI")
+require("src/ui/RewardTips")
+require("src/ui/ItemTips")
+require("src/ui/HeroGridS")

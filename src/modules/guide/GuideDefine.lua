@@ -1,0 +1,154 @@
+module("GuideDefine", package.seeall)
+
+GUIDE_START						= "guide_start"
+GUIDE_NEXT_STEP 				= "guide_next_step" 
+GUIDE_STACK_UPDATE				= "guide_stack_update"
+GUIDE_REGISTER_COMPONENT		= "guide_register_component"
+GUIDE_UNREGISTER_COMPONENT		= "guide_unregister_component"
+GUIDE_REGISTER_MAIN_COMPONENT	= "guide_register_main_component"
+GUIDE_UNREGISTER_MAIN_COMPONENT = "guide_unregister_main_component"
+GUIDE_REGISTER_SUB_COMPONENT 	= "guide_register_sub_component"
+GUIDE_UNREGISTER_SUB_COMPONENT	= "guide_unregister_sub_component"
+GUIDE_REMOVE_MASK				= "guide_remove_mask"
+GUIDE_TRIGGER_TALK				= "guide_trigger_talk"
+GUIDE_REFRESH_LV				= "guide_refresh_lv"
+GUIDE_JUMP						= "guide_jump"
+GUIDE_COMBO						= "guide_combo"
+GUIDE_DO_STEP					= "guide_do_step"
+GUIDE_REFRESH_HERO_LV			= "guide_refresh_hero_lv"
+
+GUIDE_USER_SPLIT_SIGN 			= ","
+
+GUIDE_FIRST_STEP				= 1
+
+GUIDE_TRIGGER_TYPE_NONE			= 0 --无触发条件
+GUIDE_TRIGGER_TYPE_LV			= 1	--等级
+GUIDE_TRIGGER_TYPE_CHAPTER 		= 2 --关卡
+GUIDE_TRIGGER_TYPE_OTHER		= 3	--其他
+GUIDE_TRIGGER_TYPE_HERO_LV		= 4 --英雄等级
+
+GUIDE_MASK_TYPE_ARROW			= 1 --手指
+GUIDE_MASK_TYPE_TALK			= 2 --小助手对话
+GUIDE_MASK_TYPE_FIGHT_SCENE		= 3 --创建战斗场景
+GUIDE_MASK_TYPE_REPORT			= 4 --战报
+GUIDE_MASK_TYPE_STOP_NEXT		= 5 --停止下一回合
+GUIDE_MASK_TYPE_START_NEXT		= 6 --继续下一回合
+GUIDE_MASK_TYPE_PAUSE			= 7 --暂停战斗
+GUIDE_MASK_TYPE_RESUME			= 8 --唤醒战斗
+GUIDE_MASK_TYPE_SPERATE			= 9 --分开两者距离
+GUIDE_MASK_TYPE_NO_LIMIT		= 10 --无限制点击
+GUIDE_MASK_TYPE_FIGHT_START_STOP= 11 --开始暂停
+GUIDE_MASK_TYPE_FIGHT_START_NEXT= 12 --开始战斗
+GUIDE_MASK_TYPE_RAGE_FULL		= 13 --回满怒气
+GUIDE_MASK_TYPE_TARGET_SKILL 	= 14 --指定目标技能
+GUIDE_MASK_TYPE_ASSIST_FULL		= 15 --回满援助值
+GUIDE_MASK_TYPE_STORY_TALK		= 16 --剧情对话
+GUIDE_MASK_TYPE_SKILL_HERO		= 17 --技能英雄图标
+GUIDE_MASK_TYPE_SKILL_ATTR		= 18 --技能克制
+GUIDE_MASK_TYPE_HERO_GET		= 19 --获得英雄
+GUIDE_MASK_TYPE_NONE			= 20 --纯捕获点击，无遮罩
+GUIDE_MASK_TYPE_CRITICAL		= 21 --百分百暴击
+GUIDE_MASK_TYPE_RESET_CRITICAL	= 22 --重置暴击
+GUIDE_MASK_TYPE_CATCH			= 23 --接招无限时
+GUIDE_MASK_TYPE_RESET_CATCH		= 24 --重置接招
+GUIDE_MASK_TYPE_TOUCH			= 25 --纯点击
+GUIDE_MASK_TYPE_ASSIST_LV		= 26 --援助等级
+GUIDE_MASK_TYPE_SKILL_LV		= 27 --技能等级
+GUIDE_MASK_TYPE_HIDE_BTN		= 28 --隐藏按钮
+GUIDE_MASK_TYPE_TIME_OUT		= 29 --时间结束
+GUIDE_MASK_TYPE_ASSIST			= 30 --放援助
+GUIDE_MASK_TYPE_COMBO			= 31 --放接招
+GUIDE_MASK_TYPE_SHOW_BTN		= 32 --显示按钮
+GUIDE_MASK_TYPE_TOUCH_EVT		= 33 --不显示遮罩，调用方移除
+GUIDE_MASK_TYPE_SKILL			= 34 --放技能
+GUIDE_MASK_TYPE_SHOW_CHAP_JUMP	= 35 --显示跳转章节提示
+GUIDE_MASK_TYPE_FIGHT_EFF		= 36 --给出战按钮加上特效
+GUIDE_MASK_TYPE_TOUCH_NONE		= 37 --无组件手指任意点击
+
+
+GUIDE_STENCIL_TYPE_LAYER		= 1 --层遮罩
+GUIDE_STENCIL_TYPE_CLIP			= 2 --裁剪
+
+GUIDE_COMPONENT_NORMAL			= 1 --普通UI
+GUIDE_COMPONENT_MAIN			= 2 --主界面UI
+
+GUIDE_VAL_ID					= 1 --引导组ID
+GUIDE_VAL_STEP					= 2 --引导组步骤
+
+GUIDE_DELAY_SHOW_TIME_DEFAULT	= 0.05 --遮罩添加延迟时间
+GUIDE_DELAY_NEXT_TIME_DEFAULT	= 0.05 --进行下一步延迟时间
+
+GUIDE_FIGHT_SCENE				= 1000	--战斗
+GUIDE_SHOP_TREASURE				= 1100  --商店寻宝
+GUIDE_CHAPTER_FIRST				= 1101	--第一次挑战关卡
+GUIDE_POWER						= 1102  --力量
+GUIDE_CHAPTER_SECOND			= 1103	--第二关
+GUIDE_CHAPTER_THIRD				= 1104	--第三关
+GUIDE_CHAPTER_FOUR				= 1105	--第四关
+GUIDE_TASK_TALK					= 1110	--提示1
+GUIDE_TASK						= 1200  --任务
+GUIDE_HERO_ACTIVE				= 1201  --激活英雄
+GUIDE_SKILL_TALK				= 1202	--提示2
+GUIDE_SKILL_STRENGTH			= 1300 	--技能强化
+GUIDE_CHAPTER_TEN				= 1301	--第十关
+GUIDE_HERO_TALK					= 1310	--提示3
+GUIDE_PARTNER_TALK				= 1401  --提示4
+GUIDE_PARTNER					= 1500  --羁绊
+GUIDE_HERO_LV_UP				= 5022	--英雄升级
+GUIDE_TRANSFER					= 5000	--升阶
+GUIDE_UP_STAR					= 5001  --升星
+GUIDE_ARENA						= 5002	--竞技场
+GUIDE_TRIAL						= 5003  --闯关
+GUIDE_TRIAL_ENTER				= 5004	--进入闯关
+GUIDE_WEAPON					= 5005  --神兵
+GUIDE_BOSS						= 5006	--世界BOSS
+GUIDE_SKILL_EXT					= 5007	--技能拓展
+GUIDE_SKILL_ENTER				= 5008	--进入技能界面
+GUIDE_OROCHI					= 5009	--大蛇八杰
+GUIDE_OROCHI_ENTER				= 5010  --进入大蛇八杰
+GUIDE_EXPEDITION				= 5011  --世界巡回赛
+GUIDE_CHAPTER_DIFF				= 5012	--噩梦副本
+GUIDE_FLOWER					= 5013	--鲜花
+GUIDE_FLOWER_ENTER				= 5014	--进入鲜花
+GUIDE_TRIAL_SECOND				= 5015	--闯关2
+GUIDE_TRIAL_SECOND_ENTER		= 5016	--进入闯关2
+GUIDE_TRIAL_THIRD				= 5017	--闯关3
+GUIDE_TRIAL_THIRD_ENTER			= 5018	--进入闯关3
+GUIDE_GUILD						= 5019	--公会
+GUIDE_TREASURE					= 5020	--夺宝
+GUIDE_TREASURE_ENTER			= 5021	--进入夺宝
+GUIDE_TRAIN						= 5023  --培养
+GUIDE_TALENT					= 5024	--天赋
+GUIDE_HERO_LV_UP_PRE			= 5025  --升级前小助手提示
+GUIDE_CHAPTER_BOX				= 5026	--关卡宝箱
+GUIDE_CHAPTER_FIGHT_SEC			= 5027	--打第二关
+GUIDE_SIGN_IN					= 5028	--签到
+GUIDE_CHAPTER_EIGHT				= 5029	--第八关
+GUIDE_EQUIP						= 5030  --装备
+GUIDE_PEAK						= 5031	--巅峰竞技场
+GUIDE_HERO_ACTIVE_SHOP			= 5034	--商店获得碎片
+GUIDE_ACHIEVE					= 5035	--成就
+GUIDE_GEM_QUICK					= 5036	--一键宝石
+GUIDE_CHAPTER_FIGHT_THIRD		= 5037	--打第三关
+GUIDE_VIP_COPY					= 5038  --VIP副本
+GUIDE_HERO_ACTIVE_JUMP			= 8000	--跳过激活
+
+GUIDE_HERO_EXP 					= 1201001 --英雄经验药
+
+GUIDE_SKILL_2					= 2002
+GUIDE_SKILL_3					= 2004
+
+GUIDE_HERO_LEFT					= 1
+GUIDE_HERO_RIGHT				= 2
+		
+FILTER_LINK	= "src/modules/chapter/ui/LevelUI"
+FILTER_UI 	= "Level"
+
+FILTER_HERO_INFO_LINK = "src/modules/hero/ui/HeroInfoUI"
+FILTER_HERO_INFO_UI	= "HeroInfo"
+
+FILTER_ARENA_LINK = "src/modules/arena/ui/ArenaUI"
+FILTER_ARENA_UI = "Arena"
+
+FILTER_CHAPTER_FIGHT_LINK = "src/modules/chapter/ui/ChapterFightUI"
+FILTER_CHAPTER_FIGHT_UI = "ChapterFightUI"

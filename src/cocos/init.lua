@@ -1,0 +1,7 @@
+require("src/cocos/Cocos2d")
+require("src/cocos/Cocos2dConstants")
+require("src/cocos/GuiConstants")
+require("src/cocos/Opengl")
+require("src/cocos/OpenglConstants")
+require("src/cocos/StudioConstants")
+require("src/cocos/AudioEngine")
